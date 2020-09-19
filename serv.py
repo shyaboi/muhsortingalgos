@@ -32,7 +32,8 @@ def sortLoopLoop():
     loopArrReturned = str(sortLoop(list))
     
     
-    return jsonify(loopArrReturned)
+    return render_template('hello.html', loopArrReturned=loopArrReturned)
+
 
 @app.route('/')
 
