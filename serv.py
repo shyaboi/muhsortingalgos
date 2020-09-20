@@ -24,3 +24,6 @@ def bubSort():
 # def something():
 #     # lastMake()
 #     txt = '432 5 5787 4 324 43 3 6 77 7 67 543 543'
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
