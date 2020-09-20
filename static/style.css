@@ -1,4 +1,9 @@
 body{
+text-align: center;
     background: #000;
+    color: green;
+}
+
+input{
     color: green;
 }
