@@ -1,41 +1,20 @@
 from flask import Flask
 app = Flask(__name__)
 from app import bubblesort
-list = [257,5673,667,19,2,31,45,6,113,121,5764,27,42,656,88,234,11,765,66,3,95,3452,55]
-from flask import render_template, Response, jsonify
+from flask import abort, Flask, redirect, url_for, render_template, Response, jsonify, request
 import time
 from flask import Flask
 from flask_cors import CORS
+from bubs import benix
 
 app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/hello/')
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('hello.html', name=name)
-
-def sortLoopLoop():
-    
-    def sortLoop(list):
-        if bubblesort(list)==None:
-            donzo = 'donezo'
-            return donzo
-        else:
-            # time.sleep(.02)
-            loopArr = list
-            return loopArr
-            sortLoop(list)
-    sortLoop(list)
-    
-    loopArrReturned = str(sortLoop(list))
-    
-    
-    return render_template('hello.html', loopArrReturned=loopArrReturned)
-
-
-@app.route('/')
-
+@app.route('/', methods = [ 'GET','POST'])
+def receive_data():
+    return jsonify(benix(request.form['myData']))
+    # return 'thanks bruh'
 def something():
-    return sortLoopLoop()
+    # lastMake()
+    txt = '432 5 5787 4 324 43 3 6 77 7 67 543 543'
