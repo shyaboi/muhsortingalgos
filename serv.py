@@ -33,6 +33,12 @@ def insertSortResult():
     return jsonify(insertLite(request.form['arrToSort']))
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~insert sort routes end
 
+
+
+@app.route('/api/docs', methods=['GET'])
+def apiDocs():
+    return render_template("docs.html")
+
 @app.route('/', methods=['GET'])
 def index():
     return render_template("index.html")
