@@ -15,7 +15,7 @@ slider.oninput = function() {
 
 $( "#butt" ).click(()=> {
   var currentSlideVal= slideVal.innerHTML
-    var str = $("#inpuut").val();
+  var str = $("#inpuut").val();
     $.post("/", {"myData": str, 'otherData':currentSlideVal},(data)=> {
           $.each(data, function( index, value ) {
                 $( ".result" ).append(`<li>[${value}] : Array itteration index#: ${index}</li>`);

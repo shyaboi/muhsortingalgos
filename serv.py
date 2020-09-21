@@ -12,7 +12,6 @@ CORS(app)
 
 @app.route('/', methods = ['POST'])
 def receive_data():
-    # print(request.form['otherData'])
     return jsonify(benix(request.form['myData'], request.form['otherData']))
     # return 'thanks bruh'
 @app.route('/', methods = ['GET'])
