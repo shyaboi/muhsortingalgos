@@ -1,17 +1,29 @@
 var derta = [325, 333, 533, 452, 222, 344, 554, 366, 454, 634]
-
+var datts = [[12, 333, 3, 5, 2, 3,554,3,454,634],[13, 343, 33, 5, 44444444, 3,554,3,454,634],[325, 333, 533, 452, 222, 344,554,366,454,634],[2, 3, 3, 5, 2, 3,4,3,4,4]]
 var dertLen = derta.length
 
-// $( "#butt" ).click(()=> {
-  //   var str = $("#inpuut").val();
-  //   $.post("/", {"myData": datts},(data)=> {
-    //       $.each(data, function( index, value ) {
-      //           $( ".result" ).append(`<li>[${value}] : Array itteration index#: ${index}</li>`);
-      //         });
-      //   // console.log(data)
-      //   console.log(str)
-      // });
-      // })
+var slider = document.getElementById("test5");
+var slideVal = document.getElementById('val')
+// var output = document.getElementById("demo");
+// output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  console.log(this.value)
+  slideVal.innerHTML = this.value
+}
+
+
+$( "#butt" ).click(()=> {
+  console.log(slideVal.innerHTML)
+    var str = $("#inpuut").val();
+    $.post("/", {"myData": str},(data)=> {
+          $.each(data, function( index, value ) {
+                $( ".result" ).append(`<li>[${value}] : Array itteration index#: ${index}</li>`);
+              });
+        // console.log(data)
+        console.log(str)
+      });
+      })
       var ctx = document.getElementById('myChart').getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'bar',
@@ -81,13 +93,14 @@ var dertLen = derta.length
           });
           chart.update();
         }
-        var dattss = [[12, 333, 3, 5, 2, 3,554,3,454,634],[13, 343, 33, 5, 44444444, 3,554,3,454,634],[325, 333, 533, 452, 222, 344,554,366,454,634],[2, 3, 3, 5, 2, 3,4,3,4,4]]
    var two =  [2, 3, 3, 5, 2, 3,4,3,4,4]
 
     setTimeout(() => {
         for (let i = 0; i < two.length; i++) {
-
-          addData(myChart, 'things', two)
+            let twoo = two[i]
+          addData(myChart, 'things', twoo)
           
         }
       },4000);
+
+
