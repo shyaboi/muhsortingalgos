@@ -1,6 +1,14 @@
 import sys
+import random
 
-def benix(txt):
+
+def benix(txt,other):
+    randomlist = []
+    for i in range(0,int(other)):
+        n = random.randint(1,30)
+        randomlist.append(n)
+    print(randomlist)
+    print(other)
     list = [int(s) for s in txt.split()]
 
     lost = []
@@ -15,6 +23,6 @@ def benix(txt):
                     temp = list[idx]
                     list[idx] = list[idx+1]
                     list[idx+1] = temp
-    bubblesort(list)
+    bubblesort(randomlist)
     return lost
 # print(list)
