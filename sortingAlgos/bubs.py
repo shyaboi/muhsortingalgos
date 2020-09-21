@@ -14,6 +14,10 @@ def benix(txt,other):
     lost = []
 # if its not blank, the array is the user entered numbers split to an arr
     if txt!='':
+      print (type(txt))
+      if txt.startswith('[') and txt.endswith(']'):
+        oof = "strings only now, big math brains later"
+        return oof
       list = [int(s) for s in txt.split()]
       pass
     else:
@@ -34,3 +38,6 @@ def benix(txt,other):
     bubblesort(list)
     # returning the array of arrays
     return lost
+
+
+
