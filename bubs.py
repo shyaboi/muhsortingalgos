@@ -7,7 +7,8 @@ def benix(txt,other):
     randomlist = []
     # random list gen for loop
     for i in range(0,int(other)):
-        n = random.randint(1,30)
+      # muh python inclusive/exlusive range
+        n = random.randint(1,1001)
         randomlist.append(n)
 # lost list alias to return at end of itterations
     lost = []
