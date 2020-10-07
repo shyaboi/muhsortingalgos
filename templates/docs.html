@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    docccccccccccccccccccsssssssssssssssssssssssssssssssssssss
+    <h1>This is a sorting algorithm API.</h1>
+    <br>
+    <h2>User Story</h2>
+    <p> You want to sort a list of numbers. You want to see which sorting algorithm will get your information sorted in the least amount of iterations.</p>
+    <br>
+    <h2>Usage</h2>
+    <p>This API in its current version, can be used via form data in a POST request</p>
+    <br>
+    <h2>Post Man</h2>
+    <br>
+    <p>To use this API with Post man, use the 'form data' in the body type.</p>
+    <br>
+    <p>The fist key of the form will be labeled 'arrToSort'. For the value, you can currently enter any amount of numbers seperated by spaces.</p>
+    <p>The second key of the form is for a random number of indices. This field is required, but only read if the first form is blank. The key in the form should be entered as 'randomIndices', and the value can be any integer.</p>
+    <h2>Example POST</h2>
+    <img src="https://i.ibb.co/0BstdLb/2020-10-06-23h58-39.png" alt="an image of an example post to the sorting API">
+    <h2>Result</h2>
+    <p>A succsessful post to /bubbleSort will result in an array of arrays with every itteration it took to sort the given numbers or indices</p>
+    <h3>Example Result</h3>
+    <img src="https://i.ibb.co/KXLWm8N/2020-10-07-00h01-22.png" alt="an image of an example post to the sorting API">
+
 </body>
 </html>
