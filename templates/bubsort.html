@@ -11,10 +11,10 @@
       <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
    
       <!-- Compiled and minified CSS -->
-      <link
+      <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-      />
+      /> -->
 
       <!-- chart js cdn -->
       <script
@@ -28,6 +28,9 @@
     <title>MuhSorting Algos</title>
   </head>
   <body>
+    <header>
+      <a href="/api/py-sort/home">Home</a>
+    </header>
     <div class="container">
       <h1>Bubble Sort</h1>
       <!-- <h4>Pythong Code</h4> -->
@@ -68,6 +71,7 @@
       <!-- </form> -->
       <ul class="result"></ul>
     </div>
+    
     <script src="{{ url_for('static',filename='js.js') }}"> </script>
   </body>
 </html>
