@@ -16,7 +16,7 @@ slider.oninput = function() {
 $( "#butt" ).click(()=> {
   var currentSlideVal= slideVal.innerHTML
   var str = $("#inpuut").val();
-    $.post("/bubbleSort", {"arrToSort": str, 'randomIndices':currentSlideVal},(data)=> {
+    $.post("/api/py-sort/bubbleSort", {"arrToSort": str, 'randomIndices':currentSlideVal},(data)=> {
           $.each(data, function( index, value ) {
                 $( ".result" ).append(`<li>[${value}] : Array itteration index#: ${index}</li>`);
               });
