@@ -10,10 +10,8 @@
     ></script>
     <link rel="stylesheet" href="../static/style.css" />
     <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+
     <!-- chart js cdn -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
@@ -27,17 +25,9 @@
   </head>
   <body>
     <div class="container">
-      <h1>Bubble Sort</h1>
+      <h1>Insertion Sort</h1>
       <!-- <h4>Pythong Code</h4> -->
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/Cq7SMsQBEUw"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8oJS1BMKE64" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <!-- <form method="POST"> -->
       <h2>
         Input the numbers you want to bubble sort seperated by spaces.
@@ -67,5 +57,5 @@
       <ul class="result"></ul>
     </div>
   </body>
-  <script src="../static/js.js"></script>
+  <script src="{{ url_for('static',filename='js.js') }}"> </script>
 </html>

@@ -28,6 +28,10 @@ def bubSort():
     return render_template("bubsort.html")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~bubble sort routes end
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~insert sort routes start
+@app.route('/api/py-sort/insertSort', methods=['GET'])
+def insertSortGet():
+    return render_template("insertSort.html")
+
 @app.route('/api/py-sort/insertSortResult', methods=['POST'])
 def insertSortResult():
     return jsonify(insertLite(request.form['arrToSort']))
